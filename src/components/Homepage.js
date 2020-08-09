@@ -22,8 +22,8 @@ export default class Homepage extends React.Component {
                 <Header></Header>
                 <ScrollerTabs value={this.state.tabShown} onTabChange={(event, value) => this.setState({tabShown: value})}></ScrollerTabs>
                 <Grid container spacing={2}>
-                    <Grid item xs={2}></Grid>
-                    <Grid item xs={8}>
+                    <Grid item xs={0} sm={1} lg={2}></Grid>
+                    <Grid item xs={12} sm={10} lg={8}>
                         <Paper style={{padding: '5%'}}>
                             <Section title="Work Experience" icon={<WorkOutlineIcon />}>
                                 <SectionItem
@@ -85,7 +85,7 @@ export default class Homepage extends React.Component {
                             </Section>
                         </Paper>
                     </Grid>
-                    <Grid item xs={2}></Grid>
+                    <Grid item xs={0} sm={1} lg={2}></Grid>
                 </Grid>
             </div>
         )

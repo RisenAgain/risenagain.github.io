@@ -15,8 +15,14 @@ const StyledHeader = styled.div`
     text-align: center;
 
     .name {
-        font-size: 600%;
+        font-size: 15vw;
         margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        .name {
+           font-size: 100px;
+        }
     }
 
     .first-name {
@@ -62,8 +68,8 @@ export default class Homepage extends React.Component {
         return (
             <StyledHeader>
                 <div className="name">
-                    {/* <span className="first-name">Chirag</span>
-                    <span className="last-name">Soni</span> */}
+                    <span className="first-name">Chirag</span>
+                    <span className="last-name">Soni</span>
                 </div>
                 <div className="info">
                     <Grid container spacing={1}>
