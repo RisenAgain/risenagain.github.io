@@ -7,9 +7,9 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import {ReactComponent as Gmail} from '../assets/gmail.svg';
-import {ReactComponent as HackerRank} from '../assets/hackerrank.svg';
-import {ReactComponent as Instagram} from '../assets/instagram.svg';
+import {ReactComponent as Gmail} from '../assets/icons/gmail.svg';
+import {ReactComponent as HackerRank} from '../assets/icons/hackerrank.svg';
+import {ReactComponent as Instagram} from '../assets/icons/instagram.svg';
 
 const StyledHeader = styled.div`
     text-align: center;
@@ -62,8 +62,8 @@ export default class Homepage extends React.Component {
         return (
             <StyledHeader>
                 <div className="name">
-                    <span className="first-name">Chirag</span>
-                    <span className="last-name">Soni</span>
+                    {/* <span className="first-name">Chirag</span>
+                    <span className="last-name">Soni</span> */}
                 </div>
                 <div className="info">
                     <Grid container spacing={1}>
