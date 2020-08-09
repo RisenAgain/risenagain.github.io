@@ -1,29 +1,34 @@
 {
   "files": {
     "main.css": "/static/css/main.68782b86.chunk.css",
-    "main.js": "/static/js/main.64471e20.chunk.js",
-    "main.js.map": "/static/js/main.64471e20.chunk.js.map",
+    "main.js": "/static/js/main.2f781fe9.chunk.js",
+    "main.js.map": "/static/js/main.2f781fe9.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.4c743a9f.js",
     "runtime-main.js.map": "/static/js/runtime-main.4c743a9f.js.map",
-    "static/css/2.e3d0dd9d.chunk.css": "/static/css/2.e3d0dd9d.chunk.css",
-    "static/js/2.7e9a7178.chunk.js": "/static/js/2.7e9a7178.chunk.js",
-    "static/js/2.7e9a7178.chunk.js.map": "/static/js/2.7e9a7178.chunk.js.map",
+    "static/css/2.9153e85c.chunk.css": "/static/css/2.9153e85c.chunk.css",
+    "static/js/2.b0176970.chunk.js": "/static/js/2.b0176970.chunk.js",
+    "static/js/2.b0176970.chunk.js.map": "/static/js/2.b0176970.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.431343a3570d6b97d2964b52dd4e831b.js": "/precache-manifest.431343a3570d6b97d2964b52dd4e831b.js",
+    "precache-manifest.338d05982cbd7bff8c1dcd1a9750ddd8.js": "/precache-manifest.338d05982cbd7bff8c1dcd1a9750ddd8.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/2.e3d0dd9d.chunk.css.map": "/static/css/2.e3d0dd9d.chunk.css.map",
+    "static/css/2.9153e85c.chunk.css.map": "/static/css/2.9153e85c.chunk.css.map",
     "static/css/main.68782b86.chunk.css.map": "/static/css/main.68782b86.chunk.css.map",
-    "static/js/2.7e9a7178.chunk.js.LICENSE.txt": "/static/js/2.7e9a7178.chunk.js.LICENSE.txt",
+    "static/js/2.b0176970.chunk.js.LICENSE.txt": "/static/js/2.b0176970.chunk.js.LICENSE.txt",
+    "static/media/deshaw.6c2307fb.svg": "/static/media/deshaw.6c2307fb.svg",
     "static/media/gmail.deda33ae.svg": "/static/media/gmail.deda33ae.svg",
+    "static/media/group.34ae58b6.svg": "/static/media/group.34ae58b6.svg",
     "static/media/hackerrank.33d1f93a.svg": "/static/media/hackerrank.33d1f93a.svg",
     "static/media/instagram.46ce74c2.svg": "/static/media/instagram.46ce74c2.svg",
-    "static/media/index.css": "/static/media/roboto-latin-900-normal.bb1e4dc6.woff"
+    "static/media/700-normal.css": "/static/media/lato-latin-ext-700-normal.19e57ab1.woff2",
+    "static/media/500-normal.css": "/static/media/raleway-vietnamese-500-normal.59568860.woff2",
+    "static/media/index.css": "/static/media/roboto-latin-900-normal.bb1e4dc6.woff",
+    "static/media/samsung.0d84cdef.svg": "/static/media/samsung.0d84cdef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.4c743a9f.js",
-    "static/css/2.e3d0dd9d.chunk.css",
-    "static/js/2.7e9a7178.chunk.js",
+    "static/css/2.9153e85c.chunk.css",
+    "static/js/2.b0176970.chunk.js",
     "static/css/main.68782b86.chunk.css",
-    "static/js/main.64471e20.chunk.js"
+    "static/js/main.2f781fe9.chunk.js"
   ]
 }

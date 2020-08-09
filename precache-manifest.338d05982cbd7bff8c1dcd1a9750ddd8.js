@@ -1,35 +1,43 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "09af8b1aec63ba61a75f652a32c8545b",
+    "revision": "14248c8342f4808b000bfc7a054271cd",
     "url": "/index.html"
   },
   {
-    "revision": "0e685351208fb1eb0d25",
-    "url": "/static/css/2.e3d0dd9d.chunk.css"
+    "revision": "840070f2f16665bc157c",
+    "url": "/static/css/2.9153e85c.chunk.css"
   },
   {
-    "revision": "326ed38ed3dbbda574eb",
+    "revision": "e2a31e8d5c2308bdb099",
     "url": "/static/css/main.68782b86.chunk.css"
   },
   {
-    "revision": "0e685351208fb1eb0d25",
-    "url": "/static/js/2.7e9a7178.chunk.js"
+    "revision": "840070f2f16665bc157c",
+    "url": "/static/js/2.b0176970.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/static/js/2.7e9a7178.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.b0176970.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "326ed38ed3dbbda574eb",
-    "url": "/static/js/main.64471e20.chunk.js"
+    "revision": "e2a31e8d5c2308bdb099",
+    "url": "/static/js/main.2f781fe9.chunk.js"
   },
   {
     "revision": "59377bf1d29adc0572c5",
     "url": "/static/js/runtime-main.4c743a9f.js"
   },
   {
+    "revision": "6c2307fb43e8c3206b12a24d1e7de991",
+    "url": "/static/media/deshaw.6c2307fb.svg"
+  },
+  {
     "revision": "deda33aea2bfa9216df4b9abc2d17698",
     "url": "/static/media/gmail.deda33ae.svg"
+  },
+  {
+    "revision": "34ae58b62002edb7ce663e6a349e44f3",
+    "url": "/static/media/group.34ae58b6.svg"
   },
   {
     "revision": "33d1f93a160c34b341a23ea3f910b15d",
@@ -38,6 +46,42 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "46ce74c2e7da57b99857891a9e0ebf94",
     "url": "/static/media/instagram.46ce74c2.svg"
+  },
+  {
+    "revision": "fbeba361561b9dabb20093cf0cca9d16",
+    "url": "/static/media/lato-all-700-normal.fbeba361.woff"
+  },
+  {
+    "revision": "1efbd38aa76ddae2580fedf378276333",
+    "url": "/static/media/lato-latin-700-normal.1efbd38a.woff2"
+  },
+  {
+    "revision": "19e57ab1bf14417609febe398e2f7eed",
+    "url": "/static/media/lato-latin-ext-700-normal.19e57ab1.woff2"
+  },
+  {
+    "revision": "256be738001591ec9b9d62a21440fccb",
+    "url": "/static/media/raleway-all-500-normal.256be738.woff"
+  },
+  {
+    "revision": "8bf4ee756fdcafb4c17511a49d2f49db",
+    "url": "/static/media/raleway-cyrillic-500-normal.8bf4ee75.woff2"
+  },
+  {
+    "revision": "61d8e28767a598cc365a6b58358b5de1",
+    "url": "/static/media/raleway-cyrillic-ext-500-normal.61d8e287.woff2"
+  },
+  {
+    "revision": "16cb15be68e3eba482477b6e25528307",
+    "url": "/static/media/raleway-latin-500-normal.16cb15be.woff2"
+  },
+  {
+    "revision": "8c8f3a7af9f61a0f6c77e4bd4c3866ad",
+    "url": "/static/media/raleway-latin-ext-500-normal.8c8f3a7a.woff2"
+  },
+  {
+    "revision": "59568860824fecc9ecb1e06df16b395c",
+    "url": "/static/media/raleway-vietnamese-500-normal.59568860.woff2"
   },
   {
     "revision": "f8b1df51ba843179fa1cc9b53d58127a",
@@ -134,5 +178,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "bb1e4dc6333675d11ada2e857e7f95d7",
     "url": "/static/media/roboto-latin-900-normal.bb1e4dc6.woff"
+  },
+  {
+    "revision": "0d84cdefb27a62a665e02e4809998b60",
+    "url": "/static/media/samsung.0d84cdef.svg"
   }
 ]);
