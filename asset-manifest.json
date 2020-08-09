@@ -1,34 +1,33 @@
 {
   "files": {
     "main.css": "/static/css/main.68782b86.chunk.css",
-    "main.js": "/static/js/main.c80a9ea0.chunk.js",
-    "main.js.map": "/static/js/main.c80a9ea0.chunk.js.map",
+    "main.js": "/static/js/main.359ad22f.chunk.js",
+    "main.js.map": "/static/js/main.359ad22f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.4c743a9f.js",
     "runtime-main.js.map": "/static/js/runtime-main.4c743a9f.js.map",
     "static/css/2.9153e85c.chunk.css": "/static/css/2.9153e85c.chunk.css",
-    "static/js/2.b0176970.chunk.js": "/static/js/2.b0176970.chunk.js",
-    "static/js/2.b0176970.chunk.js.map": "/static/js/2.b0176970.chunk.js.map",
+    "static/js/2.064b5ec7.chunk.js": "/static/js/2.064b5ec7.chunk.js",
+    "static/js/2.064b5ec7.chunk.js.map": "/static/js/2.064b5ec7.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.db13bf30a38f0d6982d808c2f186bf74.js": "/precache-manifest.db13bf30a38f0d6982d808c2f186bf74.js",
+    "precache-manifest.49f94171d4ad9fbbcd1e47d6be99fde1.js": "/precache-manifest.49f94171d4ad9fbbcd1e47d6be99fde1.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.9153e85c.chunk.css.map": "/static/css/2.9153e85c.chunk.css.map",
     "static/css/main.68782b86.chunk.css.map": "/static/css/main.68782b86.chunk.css.map",
-    "static/js/2.b0176970.chunk.js.LICENSE.txt": "/static/js/2.b0176970.chunk.js.LICENSE.txt",
+    "static/js/2.064b5ec7.chunk.js.LICENSE.txt": "/static/js/2.064b5ec7.chunk.js.LICENSE.txt",
     "static/media/deshaw.6c2307fb.svg": "/static/media/deshaw.6c2307fb.svg",
     "static/media/gmail.deda33ae.svg": "/static/media/gmail.deda33ae.svg",
-    "static/media/group.34ae58b6.svg": "/static/media/group.34ae58b6.svg",
     "static/media/hackerrank.33d1f93a.svg": "/static/media/hackerrank.33d1f93a.svg",
     "static/media/instagram.46ce74c2.svg": "/static/media/instagram.46ce74c2.svg",
     "static/media/700-normal.css": "/static/media/lato-latin-ext-700-normal.19e57ab1.woff2",
     "static/media/500-normal.css": "/static/media/raleway-vietnamese-500-normal.59568860.woff2",
     "static/media/index.css": "/static/media/roboto-latin-900-normal.bb1e4dc6.woff",
-    "static/media/samsung.0d84cdef.svg": "/static/media/samsung.0d84cdef.svg"
+    "static/media/samsung.761cb5d4.svg": "/static/media/samsung.761cb5d4.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.4c743a9f.js",
     "static/css/2.9153e85c.chunk.css",
-    "static/js/2.b0176970.chunk.js",
+    "static/js/2.064b5ec7.chunk.js",
     "static/css/main.68782b86.chunk.css",
-    "static/js/main.c80a9ea0.chunk.js"
+    "static/js/main.359ad22f.chunk.js"
   ]
 }
