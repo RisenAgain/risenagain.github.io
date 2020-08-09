@@ -8,6 +8,8 @@ import PeopleIcon from '@material-ui/icons/People';
 import {ReactComponent as Group} from '../assets/icons/group.svg';
 
 const StyledSectionItem = styled.div`
+    padding: 2% 0 2% 0;
+
     .header {
         margin-bottom: 10px;
     }
