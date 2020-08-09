@@ -2,22 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'fontsource-roboto';
 import './index.css';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import {ThemeProvider} from 'styled-components';
+import { createMuiTheme, ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import Homepage from './components/Homepage';
 import * as serviceWorker from './serviceWorker';
 
 const theme = createMuiTheme({
-  dark: {
-
-  },
+  
 });
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <Homepage />
-    </ThemeProvider>
+    <MuiThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
+        <Homepage />
+      </ThemeProvider>
+    </MuiThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

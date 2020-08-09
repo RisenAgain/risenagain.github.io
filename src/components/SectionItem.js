@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import Box from '@material-ui/core/Box';
 import PropTypes from 'prop-types';
 import 'fontsource-raleway/500-normal.css'
 import 'fontsource-lato/700-normal.css'
 import PersonIcon from '@material-ui/icons/Person';
 import PeopleIcon from '@material-ui/icons/People';
-import {ReactComponent as Group} from '../assets/icons/group.svg';
+import DateRangeIcon from '@material-ui/icons/DateRange';
 
 const StyledSectionItem = styled.div`
     padding: 2% 0 2% 0;
@@ -21,6 +22,7 @@ const StyledSectionItem = styled.div`
     .header > .title {
         font-family: 'Lato';
         font-size: 1.3rem;
+        line-height: 40px;
     }
 
     .header > .logo {
@@ -51,6 +53,10 @@ const StyledSectionItem = styled.div`
         vertical-align: sub;
     }
 
+    .description li {
+        margin-bottom: 10px;
+    }
+
 `;
 
 
@@ -61,12 +67,12 @@ export default class SectionItem extends React.Component {
     render() {
         return (
             <StyledSectionItem>
-                <div className="header">
-                    <div className="title">{this.props.title}</div>
-                    <div className="logo">
+                <Box className="header" height={40}>
+                    <Box className="title" height="100%">{this.props.title}</Box>
+                    <Box className="logo" height="100%">
                         {this.props.logo}
-                    </div>
-                </div>
+                    </Box>
+                </Box>
                 <div className="subtitle">
                     <span className="icon">
                         <PersonIcon height={16} width={16} color="primary"/>
@@ -81,6 +87,9 @@ export default class SectionItem extends React.Component {
                         <div className="department">{word}</div>
                     ))}
                     <div className="duration">
+                        <span className="icon">
+                            <DateRangeIcon height={16} width={16} color="secondary"/>
+                        </span>
                         <div className="from">{this.props.from}</div>-
                         <div className="to">{this.props.to}</div>
                     </div>
