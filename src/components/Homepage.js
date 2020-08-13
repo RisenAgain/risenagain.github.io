@@ -35,7 +35,25 @@ export default class Homepage extends React.Component {
                                     from="Jul 2020"
                                     to="Present"
                                 >
-                                    Worked on DESFlow
+                                    <ul>
+                                        <li>Worked on a feature-rich proprietary issue-tracking web application based on Java and Javascript. Developed user friendly diff functionality for HTML contents. Explored and fixed security vulnerabilities in the system like cross site scripting, SQL injection, etc. While on operations, debugged miscellaneous bugs in the system reported by users.
+                                            <Tag>Java</Tag>
+                                            <Tag>MSSQL</Tag>
+                                            <Tag>T-SQL</Tag>
+                                            <Tag>JavaScript</Tag>
+                                            <Tag>ClosureTemplates</Tag>
+                                        </li>
+                                        <li>Developed the front-end of a progress reporting system from scratch in React. The system enables user to generate reports of their work and tracks time spent across various activities. Integrated it with the issue tracking platform using REST APIs. Was involved in designing database schema for the product as well.
+                                            <Tag>react</Tag>
+                                            <Tag>react-redux</Tag>
+                                            <Tag>react-thunk</Tag>
+                                            <Tag>normalizr</Tag>
+                                            <Tag>express</Tag>
+                                            <Tag>nodejs</Tag>
+                                            <Tag>reselect</Tag>
+                                            <Tag>immer</Tag>
+                                        </li>
+                                    </ul>
                                 </SectionItem>
                                 <SectionItem
                                     title="Samsung Research Institute Delhi"
