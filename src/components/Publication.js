@@ -4,11 +4,10 @@ import Box from '@material-ui/core/Box';
 import PropTypes from 'prop-types';
 import 'fontsource-raleway/500-normal.css'
 import 'fontsource-lato/700-normal.css'
-import PersonIcon from '@material-ui/icons/Person';
+import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import PeopleIcon from '@material-ui/icons/People';
-import DateRangeIcon from '@material-ui/icons/DateRange';
 
-const StyledSectionItem = styled.div`
+const StyledPublication = styled.div`
     padding: 2% 0 2% 0;
 
     .header {
@@ -22,7 +21,6 @@ const StyledSectionItem = styled.div`
     .header > .title {
         font-family: 'Lato';
         font-size: 1.3rem;
-        line-height: 40px;
     }
 
     .header > .logo {
@@ -60,44 +58,40 @@ const StyledSectionItem = styled.div`
 `;
 
 
-export default class SectionItem extends React.Component {
+export default class Publication extends React.Component {
     static propTypes = {
-        title: PropTypes.string
+        title: PropTypes.string,
+        where: PropTypes.string,
+        authors: PropTypes.array,
     }
     render() {
         return (
-            <StyledSectionItem>
+            <StyledPublication>
                 <Box className="header" height={40}>
-                    <Box className="title" height="100%">{this.props.title}</Box>
-                    <Box className="logo" height="100%">
-                        {this.props.logo}
+                    <Box className="title" height="100%">
+                        "{this.props.title}"
+                        <span className="link">
+                            <a href={this.props.link} target="_blank" rel="noopener noreferrer">
+                                <OpenInNewIcon></OpenInNewIcon>
+                            </a>
+                        </span>
                     </Box>
                 </Box>
+                <div className="where">
+                    {this.props.where}
+                </div>
                 <div className="subtitle">
-                    <span className="icon">
-                        <PersonIcon height={16} width={16} color="primary"/>
-                    </span>
-                    {this.props.position.split(' ').map(word => (
-                        <div className="position">{word}</div>
-                    ))}
                     <span className="icon">
                         <PeopleIcon height={16} width={16} color="secondary"/>
                     </span>
-                    {this.props.department.split(' ').map(word => (
-                        <div className="department">{word}</div>
+                    {this.props.authors.map((author) => (
+                        <div className="author">{author}</div>
                     ))}
-                    <div className="duration">
-                        <span className="icon">
-                            <DateRangeIcon height={16} width={16} color="secondary"/>
-                        </span>
-                        <div className="from">{this.props.from}</div>-
-                        <div className="to">{this.props.to}</div>
-                    </div>
                 </div>
                 <div className="description">
                     {this.props.children}
                 </div>
-            </StyledSectionItem>
+            </StyledPublication>
         )
     }
 }

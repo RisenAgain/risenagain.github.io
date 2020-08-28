@@ -3,20 +3,35 @@ import ReactDOM from 'react-dom';
 import 'fontsource-roboto';
 import './index.css';
 import {ThemeProvider} from 'styled-components';
-import { createMuiTheme, ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
+import { createMuiTheme, ThemeProvider as MuiThemeProvider, responsiveFontSizes } from '@material-ui/core/styles';
 import Homepage from './components/Homepage';
 import * as serviceWorker from './serviceWorker';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
 
-const theme = createMuiTheme({
+let theme = createMuiTheme({
   
 });
-
+theme = responsiveFontSizes(theme);
 
 ReactDOM.render(
   <React.StrictMode>
     <MuiThemeProvider theme={theme}>
       <ThemeProvider theme={theme}>
-        <Homepage />
+        <Router>
+          <Switch>
+            <Route path='/home'>
+              <Homepage />
+            </Route>
+            <Route path='/'>
+              <Redirect to="/home" />
+            </Route>
+          </Switch>
+        </Router>
       </ThemeProvider>
     </MuiThemeProvider>
   </React.StrictMode>,

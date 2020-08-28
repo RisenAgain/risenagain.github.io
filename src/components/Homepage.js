@@ -4,11 +4,13 @@ import Paper from '@material-ui/core/Paper';
 import Header from './Header';
 import ScrollerTabs from './ScrollerTabs';
 import Section from './Section';
-import SectionItem from './SectionItem';
+import WorkExp from './WorkExp';
+import Project from './Project';
 import Tag from './Tag';
 import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 import {ReactComponent as DEShaw} from '../assets/icons/deshaw.svg';
 import {ReactComponent as Samsung} from '../assets/icons/samsung.svg';
+import Publication from './Publication';
 
 export default class Homepage extends React.Component {
     constructor(props) {
@@ -26,24 +28,16 @@ export default class Homepage extends React.Component {
                     <Grid item xs={0} sm={1} lg={2}></Grid>
                     <Grid item xs={12} sm={10} lg={8}>
                         <Paper style={{padding: '5%'}}>
+                            <div id="work-experience">
                             <Section title="Work Experience" icon={<WorkOutlineIcon />}>
-                                <SectionItem
+                                <WorkExp
                                     title="D. E. Shaw India Pvt. Ltd."
                                     logo={<DEShaw height={40} width={170}/>}
-                                    position="Senior Member Technical"
-                                    department="Front Office Tech"
-                                    from="Jul 2020"
-                                    to="Present"
+                                    positions={[{title:"Senior Member Technical", department: "Front Office Tech", from:"Jul 2020", to:"Present"},
+                                    {title:"Member Technical", department: "Front Office Tech", from:"Jul 2019", to:"June 2020"}]}
                                 >
                                     <ul>
-                                        <li>Worked on a feature-rich proprietary issue-tracking web application based on Java and Javascript. Developed user friendly diff functionality for HTML contents. Explored and fixed security vulnerabilities in the system like cross site scripting, SQL injection, etc. While on operations, debugged miscellaneous bugs in the system reported by users.
-                                            <Tag>Java</Tag>
-                                            <Tag>MSSQL</Tag>
-                                            <Tag>T-SQL</Tag>
-                                            <Tag>JavaScript</Tag>
-                                            <Tag>ClosureTemplates</Tag>
-                                        </li>
-                                        <li>Developed the front-end of a progress reporting system from scratch in React. The system enables user to generate reports of their work and tracks time spent across various activities. Integrated it with the issue tracking platform using REST APIs. Was involved in designing database schema for the product as well.
+                                        <li>Developing the front-end of a progress reporting system from scratch in React. The system enables users to generate reports of their work and tracks time spent across various activities. Took a lead in making key design decisions for the front end architecture and was also involved in designing database schema.
                                             <Tag>react</Tag>
                                             <Tag>react-redux</Tag>
                                             <Tag>react-thunk</Tag>
@@ -53,15 +47,19 @@ export default class Homepage extends React.Component {
                                             <Tag>reselect</Tag>
                                             <Tag>immer</Tag>
                                         </li>
+                                        <li>Worked on a feature-rich proprietary issue-tracking cum workflow management product based on Java and Javascript. Developed diff functionality for HTML content. Fixed security vulnerabilities in the system like cross site scripting, SQL injection, etc. Hands-on experience with SQL Server. Debugged miscellaneous bugs in the system reported by users.
+                                            <Tag>Java</Tag>
+                                            <Tag>SQL Server</Tag>
+                                            <Tag>T-SQL</Tag>
+                                            <Tag>JavaScript</Tag>
+                                            <Tag>Closure Templates</Tag>
+                                        </li>
                                     </ul>
-                                </SectionItem>
-                                <SectionItem
+                                </WorkExp>
+                                <WorkExp
                                     title="Samsung Research Institute Delhi"
                                     logo={<Samsung height={40}/>}
-                                    position="Software Engineer"
-                                    department="Server Team"
-                                    from="Jul 2018"
-                                    to="Jul 2019"
+                                    positions={[{title:"Software Engineer", department: "Server Team", from:"Jul 2018", to:"Jul 2019"}]}
                                 >
                                     <ul>
                                         <li>Worked on a highly scalable log analysis pipeline (ETL) processing billions of logs (~6TB) per day from multiple CDN vendors for OLAP purposes.
@@ -94,41 +92,115 @@ export default class Homepage extends React.Component {
                                             <Tag>Flask</Tag>
                                         </li>
                                     </ul>
-                                </SectionItem>
+                                </WorkExp>
                             </Section>
-                            <Section title="Internships" icon={<WorkOutlineIcon />}>
-                                <SectionItem
-                                    title="Industrial Technology Research Institute"
-                                    location="Taiwan"
-                                    position="Summer Research Intern"
-                                    department="ICL Lab"
-                                    from="May 2017"
-                                    to="Jul 2017"
-                                >
-                                    <ul>
-                                        <li>Researched on Secure Multi Party Computation.
-                                            <Tag>Cryptography</Tag>
-                                        </li>
-                                        <li>Developed programs on a practical SMPC framework ObliVM.</li>
-                                        <li>Analyzed complexities of different Oblivious RAM models.</li>
-                                        <li>Working demo to showcase feasible use of ObliVM for business application.</li>
-                                    </ul>
-                                </SectionItem>
-                                <SectionItem
-                                    title="Stochastic Solutions Pvt. Ltd."
-                                    location="Gurgaon"
-                                    position="Summer Intern"
-                                    department="Web Development"
-                                    from="May 2016"
-                                    to="Jul 2016"
-                                >
-                                    <ul>
-                                        <li>Developed a crowdsourcing educational website ScholarGraph.com from scratch featuring comparison and question-answer platform. It’s live!</li>
-                                        <li>Used PHP, MySQL, Google Polymer, HTML5, CSS, jQuery, CodeIgniter and Google Cloud Platform.</li>
-                                        <li>Exceeded expectations and was awarded a spot bonus. View certificate</li>
-                                    </ul>
-                                </SectionItem>
-                            </Section>
+                            </div>
+                            <div id='internships' >
+                                <Section title="Internships" icon={<WorkOutlineIcon />}>
+                                    <WorkExp
+                                        title="Industrial Technology Research Institute"
+                                        location="Taiwan"
+                                        positions={[{title:"Summer Research Intern", department: "ICL Lab", from:"May 2017", to:"Jul 2017"}]}
+                                    >
+                                        <ul>
+                                            <li>Under Dr. Tzi-Cker Chiueh’s guidance, I did extensive literature survey on the topic of Secure Multi Party Computation (SMPC) 
+                                                <Tag>Cryptography</Tag>
+                                            </li>
+                                            <li>Developed programs on a practical SMPC framework ObliVM. SMPC is still an open problem for research and ObliVM is an open source framework to solve it under practical constraints.</li>
+                                            <li>Analyzed complexities of different Oblivious RAM models. Oblivious RAM is a wrapper over actual RAM to hide data access patterns to make computation oblivious for any adversary.</li>
+                                            <li>Demonstrated feasible use of ObliVM for business application by computing market trends while remaining oblivious to different datasets.</li>
+                                        </ul>
+                                    </WorkExp>
+                                    <WorkExp
+                                        title="Stochastic Solutions Pvt. Ltd."
+                                        location="Gurgaon"
+                                        positions={[{title:"Summer Intern", department: "Web Development", from:"May 2016", to:"Jul 2016"}]}
+                                    >
+                                        <ul>
+                                            <li>Developed a crowdsourcing educational website ScholarGraph.com from scratch featuring college comparison and question-answer platform.
+                                                <Tag>PHP</Tag>
+                                                <Tag>MySQL</Tag>
+                                                <Tag>Google Polymer</Tag>
+                                                <Tag>HTML5</Tag>
+                                                <Tag>CSS</Tag>
+                                                <Tag>jQuery</Tag>
+                                                <Tag>CodeIgniter</Tag>
+                                                <Tag>Google Cloud Platform</Tag>
+                                            </li>
+                                            <li>Exceeded expectations and was awarded a spot bonus.</li>
+                                        </ul>
+                                    </WorkExp>
+                                </Section>
+                            </div>
+                            <div id="publication">
+                                <Section title="Publication" icon={<WorkOutlineIcon />}>
+                                    <Publication
+                                        title="Automatic Evolution of Bi-clusters from Microarray Data using Self-Organized Multi-objective Evolutionary Algorithm"
+                                        where="Applied Intelligence Journal 2019"
+                                        authors={["Naveen Saini", "Sriparna Saha", "Chirag Soni", "Pushpak Bhattacharyya"]}
+                                        link={"http://link.springer.com/article/10.1007/s10489-019-01554-w"}
+                                    >
+                                        DOI: 10.1007/s10489-019-01554-w
+                                    </Publication>
+                                </Section>
+                            </div>
+                            <div id="projects">
+                                <Section title="Projects" icon={<WorkOutlineIcon />}>
+                                    <Project
+                                        title="Automatic Evolution of Bi-clusters from Microarray Data using Self-Organized Multi-objective Evolutionary Algorithm"
+                                        org="IIT Patna"
+                                        duration={{from:"Jan 2018", to:"May 2018"}}
+                                    >
+                                        To find which genes are co-regulated by what set of conditions in microarray data,
+                                         I implemented a deep learning model to find the coherent biclusters using self-organized 
+                                         maps and optimized multiple objective functions simultaneously. Used two different 
+                                         microarray datasets and optimized quality of biclusters on 3 different metrics. 
+                                         Published a research journal on the same.
+                                    </Project>
+                                    <Project
+                                        title="SMS Classification for Smart Assistance"
+                                        org="LG Electronics Inc., IIT Patna"
+                                        duration={{from:"Jan 2018", to:"May 2018"}}
+                                    >
+                                        I was involved in a NLP project developing a machine learning based SMS classifier for 
+                                        smart assistance. The classifier was an ensemble of SVM, logistic regression and random 
+                                        forest and was trained on an in-house dataset annotated by LG. Achieved better accuracy 
+                                        than state of the art model on the same dataset.
+                                    </Project>
+                                    <Project
+                                        title="Bone Age Detection from X-Ray"
+                                        org="IIT Patna"
+                                        duration={{from:"Jan 2018", to:"May 2018"}}
+                                    >
+                                        Radiologists manually find the skeleton age and compare it with the baby's actual age 
+                                        ensuring normal growth. Deep learning model developed here predicted the skeleton age 
+                                        of the child by analyzing X-Ray images of the hand. Developed a CNN model on top of 
+                                        InceptionV3 and tested if taking gender as a parameter improves accuracy. Achieved an 
+                                        accuracy close to the top models in the RSNA challenge.
+
+                                    </Project>
+                                    <Project
+                                        title="Machine Translation"
+                                        org="IIT Patna"
+                                        duration={{from:"Jan 2018", to:"May 2018"}}
+                                    >
+                                        Independent study under Dr. Asif Ekbal
+                                        Investigated a hybrid model for machine translation following rule-based and statistical 
+                                        approach to translation. Implemented a corpus translator with the help of Google and 
+                                        Bing translator. Also worked on a dependency parser for Hindi.
+                                    </Project>
+                                    <Project
+                                        title="Hostel Affairs : A voting based issue tracking platform"
+                                        org="IIT Patna"
+                                        duration={{from:"Jan 2018", to:"May 2018"}}
+                                    >
+                                        Developed a web app to track issues with voting enabled for student voices to be heard 
+                                        on pressing issues. Implemented smart search - filter - tagging algorithms for issue 
+                                        listings, lost & found, room allocation. Implemented login accounts, commenting features. 
+                                        Used Google polymer, PHP, MySQL.
+                                    </Project>                                        
+                                </Section>
+                            </div>
                         </Paper>
                     </Grid>
                     <Grid item xs={0} sm={1} lg={2}></Grid>
