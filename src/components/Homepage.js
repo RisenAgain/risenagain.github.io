@@ -1,6 +1,8 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import {Element} from 'react-scroll';
+import Banner from './Banner';
 import Header from './Header';
 import ScrollerTabs from './ScrollerTabs';
 import Section from './Section';
@@ -22,9 +24,11 @@ export default class Homepage extends React.Component {
     render() {
         return (
             <div>
+                <Banner></Banner>
                 <Header></Header>
-                <ScrollerTabs value={this.state.tabShown} onTabChange={(event, value) => this.setState({tabShown: value})}></ScrollerTabs>
-                <Grid container spacing={2}>
+                {/* <ScrollerTabs value={this.state.tabShown} onTabChange={(event, value) => this.setState({tabShown: value})}></ScrollerTabs> */}
+                <Element name="CV">
+                    <Grid container>
                     <Grid item xs={0} sm={1} lg={2}></Grid>
                     <Grid item xs={12} sm={10} lg={8}>
                         <Paper style={{padding: '5%'}}>
@@ -205,6 +209,7 @@ export default class Homepage extends React.Component {
                     </Grid>
                     <Grid item xs={0} sm={1} lg={2}></Grid>
                 </Grid>
+                </Element>
             </div>
         )
     }

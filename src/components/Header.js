@@ -88,9 +88,9 @@ export default class Homepage extends React.Component {
                                 <span className="icon">
                                     <PhoneIcon style={{color: '#64ad64'}} />
                                 </span>
-                                <span className="target">
+                                <a href="tel:+918209053990" className="target">
                                     (+91) 820-905-3990
-                                </span>
+                                </a>
                             </div>
                         </Grid>
                         <Grid item xs={12} sm={12} md={6} lg={4}>

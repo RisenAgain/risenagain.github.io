@@ -24,11 +24,8 @@ ReactDOM.render(
       <ThemeProvider theme={theme}>
         <Router>
           <Switch>
-            <Route path='/home'>
-              <Homepage />
-            </Route>
             <Route path='/'>
-              <Redirect to="/home" />
+              <Homepage />
             </Route>
           </Switch>
         </Router>
