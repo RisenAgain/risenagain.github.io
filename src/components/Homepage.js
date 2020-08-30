@@ -10,6 +10,8 @@ import WorkExp from './WorkExp';
 import Project from './Project';
 import Tag from './Tag';
 import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
+import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
+import AssignmentTurnedInOutlinedIcon from '@material-ui/icons/AssignmentTurnedInOutlined';
 import {ReactComponent as DEShaw} from '../assets/icons/deshaw.svg';
 import {ReactComponent as Samsung} from '../assets/icons/samsung.svg';
 import Publication from './Publication';
@@ -25,7 +27,7 @@ export default class Homepage extends React.Component {
         return (
             <div>
                 <Banner></Banner>
-                <Header></Header>
+                {/* <Header></Header> */}
                 {/* <ScrollerTabs value={this.state.tabShown} onTabChange={(event, value) => this.setState({tabShown: value})}></ScrollerTabs> */}
                 <Element name="CV">
                     <Grid container>
@@ -137,7 +139,7 @@ export default class Homepage extends React.Component {
                                 </Section>
                             </div>
                             <div id="publication">
-                                <Section title="Publication" icon={<WorkOutlineIcon />}>
+                                <Section title="Publication" icon={<DescriptionOutlinedIcon />}>
                                     <Publication
                                         title="Automatic Evolution of Bi-clusters from Microarray Data using Self-Organized Multi-objective Evolutionary Algorithm"
                                         where="Applied Intelligence Journal 2019"
@@ -149,7 +151,7 @@ export default class Homepage extends React.Component {
                                 </Section>
                             </div>
                             <div id="projects">
-                                <Section title="Projects" icon={<WorkOutlineIcon />}>
+                                <Section title="Projects" icon={<AssignmentTurnedInOutlinedIcon />}>
                                     <Project
                                         title="Automatic Evolution of Bi-clusters from Microarray Data using Self-Organized Multi-objective Evolutionary Algorithm"
                                         org="IIT Patna"

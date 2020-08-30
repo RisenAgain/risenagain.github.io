@@ -1,91 +1,107 @@
-
 import React from 'react';
 import styled from 'styled-components';
 import Box from '@material-ui/core/Box';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import PropTypes from 'prop-types';
 import 'fontsource-raleway/500-normal.css'
 import 'fontsource-lato/700-normal.css'
 import DateRangeIcon from '@material-ui/icons/DateRange';
 
 const StyledProject = styled.div`
-    padding: 2% 0 2% 0;
+    ${({ theme }) => `
+        padding: 2% 0 0 0;
 
-    .header {
-        margin-bottom: 10px;
-    }
+        .header {
+            margin-bottom: 10px;
+        }
 
-    .header > div {
-        display: inline-block;
-    }
+        .header > div {
+            display: inline-block;
+        }
 
-    .header > .title {
-        font-family: 'Lato';
-        font-size: 1.3rem;
-    }
+        .header > .title {
+            font-family: 'Lato';
+            font-size: 1.3rem;
+        }
 
-    .header > .logo {
-        float: right;
-    }
+        .header > .logo {
+            float: right;
+        }
 
-    .duration {
-        float: right;
-    }
-    
-    .duration div {
-        display: inline-block;
-        font-family: 'Roboto';
-    }
+        .duration {
+            float: right;
+        }
+        
+        .duration div {
+            display: inline-block;
+            font-family: 'Roboto';
+        }
 
-    .subtitle > div {
-        display: inline-block;
-        font-family: 'Raleway';
-        text-transform: uppercase;
-        margin-right: 5px;
-    }
+        .subtitle > div {
+            display: inline-block;
+            font-family: 'Raleway';
+            text-transform: uppercase;
+            margin-right: 5px;
+        }
 
-    .subtitle > div::first-letter {
-        font-size: 1.5em;
-    }
+        .subtitle > div::first-letter {
+            font-size: 1.5em;
+        }
 
-    .subtitle .icon {
-        vertical-align: sub;
-    }
+        @media screen and (max-width: ${theme.breakpoints.values['sm']}px) {
+            .subtitle .position::first-letter {
+                font-size: 18px;
+            }
 
-    .description li {
-        margin-bottom: 10px;
-    }
+            .subtitle .position {
+                font-size: 14px;
+            }
 
+            .subtitle .duration {
+                font-size: 14px;
+            }
+
+            .header > .title {
+                font-size: 1rem;
+                line-height: inherit;
+            }
+        }
+
+        .subtitle .icon {
+            vertical-align: sub;
+        }
+
+        .description {
+            margin-top: 5px;
+        }
+    `}
 `;
 
 
-export default class Project extends React.Component {
-    static propTypes = {
-        title: PropTypes.string,
-        org: PropTypes.string,
-        duration: PropTypes.object
-    }
-    render() {
-        return (
-            <StyledProject>
-                <Box className="header" height={40}>
-                    <Box className="title" height="100%">{this.props.title}</Box>
-                </Box>
-                <div className="subtitle">
-                    {this.props.org.split(' ').map(word => (
-                        <div className="position">{word}</div>
-                    ))}
-                    <div className="duration">
-                        <span className="icon">
-                            <DateRangeIcon height={16} width={16} color="secondary"/>
-                        </span>
-                        <div className="from">{this.props.duration.from}</div>-
-                        <div className="to">{this.props.duration.to}</div>
-                    </div>
+export default function Project(props) {
+    const theme = useTheme();
+    const smallScreen = useMediaQuery(theme.breakpoints.down('md'));
+    return (
+        <StyledProject>
+            <Box className="header">
+                <Box className="title" height="100%">{props.title}</Box>
+            </Box>
+            <div className="subtitle">
+                {props.org.split(' ').map(word => (
+                    <div className="position">{word}</div>
+                ))}
+                <div className="duration">
+                    <span className="icon">
+                        <DateRangeIcon fontSize={smallScreen ? 'small' : 'default'} color="secondary"/>
+                    </span>
+                    <div className="from">{props.duration.from}</div>-
+                    <div className="to">{props.duration.to}</div>
                 </div>
-                <div className="description">
-                    {this.props.children}
-                </div>
-            </StyledProject>
-        )
-    }
+            </div>
+            <div className="description">
+                {props.children}
+            </div>
+        </StyledProject>
+    )
 }

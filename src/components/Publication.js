@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Box from '@material-ui/core/Box';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import PropTypes from 'prop-types';
 import 'fontsource-raleway/500-normal.css'
 import 'fontsource-lato/700-normal.css'
@@ -8,90 +10,92 @@ import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import PeopleIcon from '@material-ui/icons/People';
 
 const StyledPublication = styled.div`
-    padding: 2% 0 2% 0;
+    ${({ theme }) => `
+        padding: 2% 0 0 0;
 
-    .header {
-        margin-bottom: 10px;
-    }
+        .header {
+            margin-bottom: 10px;
+        }
 
-    .header > div {
-        display: inline-block;
-    }
+        .header > div {
+            display: inline-block;
+        }
 
-    .header > .title {
-        font-family: 'Lato';
-        font-size: 1.3rem;
-    }
+        .header > .title {
+            font-family: 'Lato';
+            font-size: 1.3rem;
+        }
 
-    .header > .logo {
-        float: right;
-    }
+        .where {
+            font-size: 1.2rem;
+        }
 
-    .duration {
-        float: right;
-    }
-    
-    .duration div {
-        display: inline-block;
-        font-family: 'Roboto';
-    }
+        .subtitle > div {
+            display: inline-block;
+            font-family: 'Raleway';
+            text-transform: uppercase;
+            margin-right: 5px;
+        }
 
-    .subtitle > div {
-        display: inline-block;
-        font-family: 'Raleway';
-        text-transform: uppercase;
-        margin-right: 5px;
-    }
+        .subtitle > div::first-letter {
+            font-size: 1.5em;
+        }
 
-    .subtitle > div::first-letter {
-        font-size: 1.5em;
-    }
+        @media screen and (max-width: ${theme.breakpoints.values['sm']}px) {
+            .subtitle .author::first-letter {
+                font-size: 14px;
+            }
 
-    .subtitle .icon {
-        vertical-align: sub;
-    }
+            .subtitle .author {
+                font-size: 10px;
+            }
 
-    .description li {
-        margin-bottom: 10px;
-    }
+            .header > .title {
+                font-size: 1rem;
+                line-height: inherit;
+            }
+            
+            .description {
+                font-size: 10px;
+            }
+        }
 
+        .subtitle .icon {
+            vertical-align: sub;
+        }
+    `}
 `;
 
 
-export default class Publication extends React.Component {
-    static propTypes = {
-        title: PropTypes.string,
-        where: PropTypes.string,
-        authors: PropTypes.array,
-    }
-    render() {
-        return (
-            <StyledPublication>
-                <Box className="header" height={40}>
-                    <Box className="title" height="100%">
-                        "{this.props.title}"
-                        <span className="link">
-                            <a href={this.props.link} target="_blank" rel="noopener noreferrer">
-                                <OpenInNewIcon></OpenInNewIcon>
-                            </a>
-                        </span>
-                    </Box>
-                </Box>
-                <div className="where">
-                    {this.props.where}
-                </div>
-                <div className="subtitle">
-                    <span className="icon">
-                        <PeopleIcon height={16} width={16} color="secondary"/>
+export default function Publication(props) {
+    const theme = useTheme();
+    const smallScreen = useMediaQuery(theme.breakpoints.down('md'));
+    return (
+        <StyledPublication>
+            <Box className="header">
+                <Box className="title" height="100%">
+                    {props.title}
+                    <span className="link">
+                        <a href={props.link} target="_blank" rel="noopener noreferrer">
+                            <OpenInNewIcon fontSize={smallScreen ? 'small' : 'default'} style={{verticalAlign: 'sub'}}></OpenInNewIcon>
+                        </a>
                     </span>
-                    {this.props.authors.map((author) => (
-                        <div className="author">{author}</div>
-                    ))}
-                </div>
-                <div className="description">
-                    {this.props.children}
-                </div>
-            </StyledPublication>
-        )
-    }
+                </Box>
+            </Box>
+            <div className="subtitle">
+                <span className="icon">
+                    <PeopleIcon fontSize={smallScreen ? 'small' : 'default'} color="secondary"/>
+                </span>
+                {props.authors.map((author) => (
+                    <div className="author">{author}</div>
+                ))}
+            </div>
+            <div className="where">
+                {props.where}
+            </div>
+            <div className="description">
+                {props.children}
+            </div>
+        </StyledPublication>
+    )
 }
