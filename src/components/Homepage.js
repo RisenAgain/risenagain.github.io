@@ -8,6 +8,7 @@ import WorkExp from './WorkExp';
 import Project from './Project';
 import Tag from './Tag';
 import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
+import AssignmentIndOutlinedIcon from '@material-ui/icons/AssignmentIndOutlined';
 import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
 import EmojiObjectsOutlinedIcon from '@material-ui/icons/EmojiObjectsOutlined';
 import SchoolOutlinedIcon from '@material-ui/icons/SchoolOutlined';
@@ -106,7 +107,7 @@ export default class Homepage extends React.Component {
                                 </Section>
                                 </div>
                                 <div id='internships' >
-                                    <Section title="Internships" icon={<WorkOutlineIcon />}>
+                                    <Section title="Internships" icon={<AssignmentIndOutlinedIcon />}>
                                         <WorkExp
                                             title="Industrial Technology Research Institute"
                                             location="Hsinchu, Taiwan"
