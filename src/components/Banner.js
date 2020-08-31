@@ -2,8 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import 'fontsource-kaushan-script/400.css'
 import Grid from '@material-ui/core/Grid';
 import {Link} from 'react-scroll';
+import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
+import SchoolOutlinedIcon from '@material-ui/icons/SchoolOutlined';
+import PersonOutlinedIcon from '@material-ui/icons/PersonOutlined';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import PhoneIcon from '@material-ui/icons/Phone';
 import LanguageIcon from '@material-ui/icons/Language';
@@ -36,12 +40,6 @@ const StyledBanner = styled.div`
         color: white;
     }
 
-    @media screen and (min-width: 1200px) {
-        .name {
-           font-size: 100px;
-        }
-    }
-
     .first-name {
         font-weight: lighter;
     }
@@ -50,10 +48,22 @@ const StyledBanner = styled.div`
         font-weight: 300;
     }
 
+    .brief {
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 40px;
+    }
+
+    .brief svg {
+        margin-left: 2px;
+        vertical-align: sub;
+        margin-right: 10px;
+    }
+
     .circle-container {
         position: relative;
-        width: 24em;
-        height: 24em;
+        width: 20em;
+        height: 20em;
         display: table-cell;
         text-align: center;
         vertical-align: middle;
@@ -93,6 +103,28 @@ const StyledBanner = styled.div`
         animation-name: jumping;
         animation-duration: 3s;
         animation-iteration-count: infinite;
+    }
+
+    @media screen and (min-width: 1200px) {
+        .name {
+           font-size: 100px;
+        }
+
+        .circle-container {
+            width: 24em;
+            height: 24em;
+        }
+
+        .brief {
+            margin-top: 50px;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .first-name,
+        .last-name {
+            font-family: Kaushan Script;
+        }
     }
 `;
 
@@ -148,7 +180,7 @@ export default function Banner() {
     ]
     return (
         <StyledBanner>
-            <Grid style={{height: '100%'}} container direction="column" justify="space-between" alignItems="center">
+            <Grid style={{height: '100%'}} container direction="column" justify={smallScreen ? "flex-start" : "space-between"} alignItems="center">
                 <Grid container item justify="flex-end" spacing={smallScreen ? 2 : 4} className="nav-bar">
                     <Grid item>
                         <a href="Chirag_Soni_Resume_2020.pdf" target="_blank">
@@ -164,8 +196,26 @@ export default function Banner() {
                 </Grid>
                 <Grid container item justify="space-around" alignItems="center" direction={smallScreen ? 'column-reverse' : 'row'}>
                     <Grid item className="name">
-                        <Container className="first-name">Chirag</Container>
-                        <Container className="last-name">Soni</Container>
+                        <Container>
+                            <Grid container direction={smallScreen ? 'row' : 'column'} spacing={1}>
+                                <Grid item className="first-name">Chirag</Grid>
+                                <Grid item className="last-name">Soni</Grid>
+                            </Grid>
+                        </Container>
+                        <Container className="brief">
+                            <div>
+                                <span><PersonOutlinedIcon /></span>
+                                <span>Software Engineer</span>
+                            </div>
+                            <div>
+                                <span><WorkOutlineIcon /></span>
+                                <span>D. E. Shaw India Pvt. Ltd.</span>
+                            </div>
+                            <div>
+                                <span><SchoolOutlinedIcon /></span>
+                                <span>Indian Institute of Technology Patna</span>
+                            </div>
+                        </Container>
                     </Grid>
                     <Grid item>
                         <Container>
