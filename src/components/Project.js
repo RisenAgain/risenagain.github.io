@@ -60,6 +60,8 @@ const StyledProject = styled.div`
 
             .subtitle .duration {
                 font-size: 14px;
+                float: none;
+                display: block;
             }
 
             .header > .title {

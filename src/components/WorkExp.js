@@ -10,6 +10,7 @@ import 'fontsource-lato/700-normal.css'
 import PersonIcon from '@material-ui/icons/Person';
 import PeopleIcon from '@material-ui/icons/People';
 import DateRangeIcon from '@material-ui/icons/DateRange';
+import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 
 const StyledWorkExp = styled.div`
     ${({ theme }) => `
@@ -31,6 +32,7 @@ const StyledWorkExp = styled.div`
         
         .duration {
             inline-block;
+            text-align: right;
         }
 
         .duration div {
@@ -51,6 +53,17 @@ const StyledWorkExp = styled.div`
             font-size: 1.5em;
         }
 
+        .location {
+            font-size: 16px;
+            text-transform: none;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .location svg {
+            vertical-align: sub;
+        }
+
         @media screen and (max-width: ${theme.breakpoints.values['sm']}px) {
             .subtitle .position::first-letter
             .subtitle .department::first-letter {
@@ -67,8 +80,15 @@ const StyledWorkExp = styled.div`
                 line-height: inherit;
             }
 
+            .location {
+                display: block;
+                margin-left: 0;
+                margin-top: 5px;
+            }
+
             .subtitle .duration {
                 font-size: 14px;
+                text-align: left;
             }
         }
 
@@ -89,7 +109,12 @@ export default function WorkExp(props) {
     return (
         <StyledWorkExp>
             <Grid container direction={smallScreen ? 'column-reverse' : 'row'} justify="space-between" className="header" height={40}>
-                <Grid item className="title" height="100%">{props.title}</Grid>
+                <Grid item className="title" height="100%">{props.title}
+                    <div className="location">
+                        <span><LocationOnOutlinedIcon fontSize="small" /></span>
+                        <span>{props.location}</span>
+                    </div>
+                </Grid>
                 <Grid item className="logo" height="100%">
                     {props.logo}
                 </Grid>

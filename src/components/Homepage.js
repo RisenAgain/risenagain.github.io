@@ -9,12 +9,14 @@ import Project from './Project';
 import Tag from './Tag';
 import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
-import AssignmentTurnedInOutlinedIcon from '@material-ui/icons/AssignmentTurnedInOutlined';
+import EmojiObjectsOutlinedIcon from '@material-ui/icons/EmojiObjectsOutlined';
 import SchoolOutlinedIcon from '@material-ui/icons/SchoolOutlined';
+import AssignmentTurnedInOutlinedIcon from '@material-ui/icons/AssignmentTurnedInOutlined';
 import {ReactComponent as DEShaw} from '../assets/icons/deshaw.svg';
 import {ReactComponent as Samsung} from '../assets/icons/samsung.svg';
 import Publication from './Publication';
 import Education from './Education';
+import Score from './Score';
 
 export default class Homepage extends React.Component {
     constructor(props) {
@@ -41,6 +43,7 @@ export default class Homepage extends React.Component {
                                         logo={<DEShaw height={40} width={170}/>}
                                         positions={[{title:"Senior Member Technical", department: "Front Office Tech", from:"Jul 2020", to:"Present"},
                                         {title:"Member Technical", department: "Front Office Tech", from:"Jul 2019", to:"June 2020"}]}
+                                        location="Hyderabad, India"
                                     >
                                         <ul>
                                             <li>Developing the front-end of a progress reporting system from scratch in React. The system enables users to generate reports of their work and tracks time spent across various activities. Took a lead in making key design decisions for the front end architecture and was also involved in designing database schema.
@@ -66,6 +69,7 @@ export default class Homepage extends React.Component {
                                         title="Samsung Research Institute Delhi"
                                         logo={<Samsung height={40}/>}
                                         positions={[{title:"Software Engineer", department: "Server Team", from:"Jul 2018", to:"Jul 2019"}]}
+                                        location="Noida, India"
                                     >
                                         <ul>
                                             <li>Worked on a highly scalable log analysis pipeline (ETL) processing billions of logs (~6TB) per day from multiple CDN vendors for OLAP purposes.
@@ -105,7 +109,7 @@ export default class Homepage extends React.Component {
                                     <Section title="Internships" icon={<WorkOutlineIcon />}>
                                         <WorkExp
                                             title="Industrial Technology Research Institute"
-                                            location="Taiwan"
+                                            location="Hsinchu, Taiwan"
                                             positions={[{title:"Summer Research Intern", department: "ICL Lab", from:"May 2017", to:"Jul 2017"}]}
                                         >
                                             <ul>
@@ -119,7 +123,7 @@ export default class Homepage extends React.Component {
                                         </WorkExp>
                                         <WorkExp
                                             title="Stochastic Solutions Pvt. Ltd."
-                                            location="Gurgaon"
+                                            location="Gurgaon, India"
                                             positions={[{title:"Summer Intern", department: "Web Development", from:"May 2016", to:"Jul 2016"}]}
                                         >
                                             <ul>
@@ -151,7 +155,7 @@ export default class Homepage extends React.Component {
                                     </Section>
                                 </div>
                                 <div id="projects">
-                                    <Section title="Projects" icon={<AssignmentTurnedInOutlinedIcon />}>
+                                    <Section title="Projects" icon={<EmojiObjectsOutlinedIcon />}>
                                         <Project
                                             title="Automatic Evolution of Bi-clusters from Microarray Data using Self-Organized Multi-objective Evolutionary Algorithm"
                                             org="Indian Institute of Technology Patna"
@@ -162,6 +166,10 @@ export default class Homepage extends React.Component {
                                             maps and optimized multiple objective functions simultaneously. Used two different 
                                             microarray datasets and optimized quality of biclusters on 3 different metrics. 
                                             Published a research journal on the same.
+                                            <Tag>Python</Tag>
+                                            <Tag>Deep Learning</Tag>
+                                            <Tag>Genetic Algorithms</Tag>
+                                            <Tag>Clustering</Tag>
                                         </Project>
                                         <Project
                                             title="SMS Classification for Smart Assistance"
@@ -172,6 +180,9 @@ export default class Homepage extends React.Component {
                                             smart assistance. The classifier was an ensemble of SVM, logistic regression and random 
                                             forest and was trained on an in-house dataset annotated by LG. Achieved better accuracy 
                                             than state of the art model on the same dataset.
+                                            <Tag>Python</Tag>
+                                            <Tag>NLP</Tag>
+                                            <Tag>SVM</Tag>
                                         </Project>
                                         <Project
                                             title="Bone Age Detection from X-Ray"
@@ -183,7 +194,11 @@ export default class Homepage extends React.Component {
                                             of the child by analyzing X-Ray images of the hand. Developed a CNN model on top of 
                                             InceptionV3 and tested if taking gender as a parameter improves accuracy. Achieved an 
                                             accuracy close to the top models in the RSNA challenge.
-
+                                            <Tag>Python</Tag>
+                                            <Tag>NLP</Tag>
+                                            <Tag>Keras</Tag>
+                                            <Tag>TensorFlow</Tag>
+                                            <Tag>CNN</Tag>
                                         </Project>
                                         <Project
                                             title="Machine Translation"
@@ -194,6 +209,9 @@ export default class Homepage extends React.Component {
                                             Investigated a hybrid model for machine translation following rule-based and statistical 
                                             approach to translation. Implemented a corpus translator with the help of Google and 
                                             Bing translator. Also worked on a dependency parser for Hindi.
+                                            <Tag>Python</Tag>
+                                            <Tag>NLP</Tag>
+                                            <Tag>Dependency Parser</Tag>
                                         </Project>
                                         <Project
                                             title="Hostel Affairs : A voting based issue tracking platform"
@@ -204,6 +222,12 @@ export default class Homepage extends React.Component {
                                             on pressing issues. Implemented smart search - filter - tagging algorithms for issue 
                                             listings, lost & found, room allocation. Implemented login accounts, commenting features. 
                                             Used Google polymer, PHP, MySQL.
+                                            <Tag>Polymer</Tag>
+                                            <Tag>jQuery</Tag>
+                                            <Tag>PHP</Tag>
+                                            <Tag>MySQL</Tag>
+                                            <Tag>HTML5</Tag>
+                                            <Tag>CSS3</Tag>
                                         </Project>                                        
                                     </Section>
                                 </div>
@@ -212,6 +236,7 @@ export default class Homepage extends React.Component {
                                         <Education
                                             title="Indian Institute of Technology Patna"
                                             degree="B.Tech"
+                                            location="Patna, India"
                                             department="Computer Science and Engineering"
                                             grades="8.64"
                                             scale="10"
@@ -221,6 +246,7 @@ export default class Homepage extends React.Component {
                                         <Education
                                             title="Mayank Senior Secondary School"
                                             degree="12th"
+                                            location="Kota, India"
                                             department="Rajasthan Board of Secondary Education"
                                             grades="87.80%"
                                             duration={{from: "Jul 2012", to: "May 2014"}}
@@ -229,11 +255,40 @@ export default class Homepage extends React.Component {
                                         <Education
                                             title="St. Austin's Senior Secondary School"
                                             degree="10th"
+                                            location="Jodhpur, India"
                                             department="Rajasthan Board of Secondary Education"
                                             grades="86.33%"
                                             duration={{from: "Jul 2007", to: "May 2012"}}
                                         >
                                         </Education>
+                                    </Section>
+                                </div>
+                                <div id="test-scores">
+                                    <Section title="Test Scores" icon={<AssignmentTurnedInOutlinedIcon />}>
+                                        <Score
+                                            title="GRE"
+                                            when="Oct 2019"
+                                        >
+                                            <b>328</b>/340 (167/170 - Quantitative, 161/170 - Verbal, 4.0/6.0 - Analytical)
+                                        </Score>
+                                        <Score
+                                            title="TOEFL"
+                                            when="Nov 2019"
+                                        >
+                                            <b>108</b>/120 (30/30 - Reading, 29/30 - Listening, 28/30 - Writing, 21/30 - Speaking)
+                                        </Score>
+                                        <Score
+                                            title="IIT JEE Advanced"
+                                            when="May 2014"
+                                        >
+                                            All India Rank <b>2819</b> out of 150,000 candidates
+                                        </Score>
+                                        <Score
+                                            title="IIT JEE Mains"
+                                            when="Apr 2014"
+                                        >
+                                            All India Rank <b>8413</b> out of 1,400,000 candidates
+                                        </Score>
                                     </Section>
                                 </div>
                             </Paper>
