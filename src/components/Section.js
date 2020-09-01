@@ -3,24 +3,30 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const StyledSection = styled.div`
-    margin-bottom: 4em;
-    
-    .header {
-        margin-bottom: 10px;
-    }
+    ${({ theme }) => `
+        margin-bottom: 4em;
+        
+        .header {
+            margin-bottom: 10px;
+        }
 
-    .header > div {
-        display: inline-block;
-    }
+        .header > div {
+            display: inline-block;
+        }
 
-    .header .title {
-        font-size: 2rem;
-        text-transform: uppercase;
-    }
+        .header .title {
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+        
+        .header .primary {
+            color: ${theme.palette.primary.dark}
+        }
 
-    .header .icon {
-        float: right;
-    }
+        .header .icon {
+            float: right;
+        }
+    `}
 `;
 
 
@@ -33,7 +39,7 @@ export default class Section extends React.Component {
         return (
             <StyledSection>
                 <div className="header">
-                    <div className="title">{this.props.title}</div>
+                    <div className="title primary">{this.props.title}</div>
                     <div className="icon">{this.props.icon}</div>
                 </div>
                 <div className="item">
