@@ -270,7 +270,7 @@ export default class Homepage extends React.Component {
                                             title="GRE"
                                             when="Oct 2019"
                                         >
-                                            <b>328</b>/340 (167/170 - Quantitative, 161/170 - Verbal, 4.0/6.0 - Writing)
+                                            <b>328</b>/340 (167/170 - Quantitative, 161/170 - Verbal, 4.0/6.0 - Essay)
                                         </Score>
                                         <Score
                                             title="TOEFL"
