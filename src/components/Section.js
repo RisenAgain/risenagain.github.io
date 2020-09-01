@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const StyledSection = styled.div`
-    margin-bottom: 4%;
+    margin-bottom: 4em;
     
     .header {
         margin-bottom: 10px;
