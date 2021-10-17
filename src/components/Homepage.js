@@ -42,7 +42,7 @@ export default class Homepage extends React.Component {
                                     <WorkExp
                                         title="D. E. Shaw India Pvt. Ltd."
                                         logo={<DEShaw height={40} width={170}/>}
-                                        positions={[{title:"Senior Member Technical", department: "Front Office Tech", from:"Jul 2020", to:"Present"},
+                                        positions={[{title:"Senior Member Technical", department: "Front Office Tech", from:"Jul 2020", to:"Sep 2021"},
                                         {title:"Member Technical", department: "Front Office Tech", from:"Jul 2019", to:"June 2020"}]}
                                         location="Hyderabad, India"
                                     >
@@ -234,6 +234,14 @@ export default class Homepage extends React.Component {
                                 </div>
                                 <div id="education">
                                     <Section title="Education" icon={<SchoolOutlinedIcon />}>
+                                        <Education
+                                            title="University of Washington"
+                                            degree="MS"
+                                            location="Seattle, US"
+                                            department="Computational Linguistics"
+                                            duration={{from: "Sep 2021", to: "Aug 2022"}}
+                                        >
+                                        </Education>
                                         <Education
                                             title="Indian Institute of Technology Patna"
                                             degree="B.Tech"

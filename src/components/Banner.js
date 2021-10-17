@@ -6,6 +6,7 @@ import 'fontsource-kaushan-script/400.css'
 import Grid from '@material-ui/core/Grid';
 import {Link} from 'react-scroll';
 import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
+import HistoryOutlineIcon from '@material-ui/icons/HistoryOutlined';
 import SchoolOutlinedIcon from '@material-ui/icons/SchoolOutlined';
 import PersonOutlinedIcon from '@material-ui/icons/PersonOutlined';
 import GetAppIcon from '@material-ui/icons/GetApp';
@@ -158,7 +159,7 @@ export default function Banner() {
             </a>
         </span>,
         <span className="icon">
-            <a href="tel:+918209053990">
+            <a href="tel:+12065814248">
                 <PhoneIcon style={{color: '#64ad64'}} fontSize={smallScreen ? 'default' : 'large'} />
             </a>
         </span>,
@@ -183,12 +184,12 @@ export default function Banner() {
             <Grid style={{height: '100%'}} container direction="column" justify={smallScreen ? "flex-start" : "space-between"} alignItems="center">
                 <Grid container item justify="flex-end" spacing={smallScreen ? 2 : 4} className="nav-bar">
                     <Grid item>
-                        <a href="Chirag_Soni_Resume_2020.pdf" target="_blank">
+                        <a href="Chirag_Soni_Resume_2022.pdf" target="_blank">
                             <Button size="large" endIcon={<GetAppIcon />}>Download Resume</Button>
                         </a>
                     </Grid>
                     <Grid item>
-                        <a href="Chirag_Soni_CV_2020.pdf" target="_blank">
+                        <a href="Chirag_Soni_CV_2022.pdf" target="_blank">
                             <Button size="large" endIcon={<GetAppIcon />}>Download CV</Button>
                         </a>
                     </Grid>
@@ -203,18 +204,31 @@ export default function Banner() {
                             </Grid>
                         </Container>
                         <Container className="brief">
-                            <div>
-                                <span><PersonOutlinedIcon /></span>
-                                <span>Software Engineer</span>
-                            </div>
-                            <div>
-                                <span><WorkOutlineIcon /></span>
-                                <span>D. E. Shaw India Pvt. Ltd.</span>
-                            </div>
-                            <div>
-                                <span><SchoolOutlinedIcon /></span>
-                                <span>Indian Institute of Technology Patna</span>
-                            </div>
+                                <div>
+                                    <span><PersonOutlinedIcon /></span>
+                                    <span>Software Engineer</span>
+                                    <span></span>
+                                </div>
+                                <div>
+                                    <span><SchoolOutlinedIcon /></span>
+                                    <span>University of Washington</span>
+                                    <span></span>
+                                </div>
+                                <div>
+                                    <span><WorkOutlineIcon /></span>
+                                    <span><HistoryOutlineIcon /></span>
+                                    <span>D. E. Shaw</span>
+                                </div>
+                                <div>
+                                    <span><WorkOutlineIcon /></span>
+                                    <span><HistoryOutlineIcon /></span>
+                                    <span>Samsung</span>
+                                </div>
+                                <div>
+                                    <span><SchoolOutlinedIcon /></span>
+                                    <span><HistoryOutlineIcon /></span>
+                                    <span>Indian Institute of Technology Patna</span>
+                                </div>
                         </Container>
                     </Grid>
                     <Grid item>

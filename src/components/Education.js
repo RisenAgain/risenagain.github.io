@@ -127,7 +127,7 @@ export default function Education(props) {
                     <div className="to">{props.duration.to}</div>
                 </div>
             </div>
-            <div className="degree">{props.degree} | {props.grades}{props.scale && `/${props.scale}`}</div>
+            <div className="degree">{props.degree} {props.grades && '|'} {props.grades}{props.scale && `/${props.scale}`}</div>
             <div className="description">
                 {props.children}
             </div>
